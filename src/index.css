@@ -6,8 +6,101 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/*----------MAIN------------*/
+.container{
+  position: absolute;
+  display: flex;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+.buttons{
+  width: 110px;
+  transition: 1s;
+}
+.buttons:hover{
+  cursor: pointer;
+  filter: saturate(2.2);
+  transition: 1s;
+}
+/*----------LEFT------------*/
+.openLeftBorder{
+  margin-left: 15%;
+  transition-duration: 1s;
+}
+.closeLeftBorder{
+  margin-left: 0%;
+  transition-duration: 1s;
+}
+.buttonLeftOpened{
+  margin-left: -82px;
+  transform: rotate(-90deg);
+}
+.buttonLeftClosed{
+  margin-left: -32px;
+  transform: rotate(90deg);
+}
+/*----------RIGHT------------*/
+.openRightBorder{
+  margin-right: 15%;
+  transition-duration: 1s;
+}
+.closeRightBorder{
+  margin-right: 0%;
+  transition-duration: 1s;
+}
+.buttonRightOpened{
+  margin-right: -82px;
+  transform: rotate(90deg);
+}
+.buttonRightClosed{
+  margin-right: -32px;
+  transform: rotate(-90deg);
+}
+/*----------AREA------------*/
+.curveArea{
+  width: 100%;
+  height: 95%;
+  border: solid 1px;
+  text-align: left;
+}
+.dataArea{
+  width: 300px;
+  height: 95%;
+  margin-left: 20px;
+  border: solid 1px;
+}
+/*----------DATA INPUTS------------*/
+#number{
+  width: 70%;
+}
+.addButton{
+  background-color: #407FC2;
+  color: white;
+}
+.dataValue{
+  width: 210px;
+  height: 20px;
+  border: dotted 1px grey;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.dataList{
+  overflow: auto;
+  height:40vmax
 }
